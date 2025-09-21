@@ -1,0 +1,98 @@
+/* Contenedor principal */
+.containerSesion {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 30px auto;
+    border-radius: 10px;
+
+}
+
+/* Sección izquierda con imagen */
+.left {
+    flex: 1;
+    background-image: url('/IMAGENES/SN_Vision.jpg');
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+h2{
+    font-size: 28px;
+    font-weight: Extra bold ;
+    color: #7A163C;
+    position: relative;
+    left: -120px; /* Más a la izquierda */
+    top: -150px;  /* Más arriba */
+}
+/* Sección derecha con el formulario */
+.right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos del formulario */
+.login-form {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-form h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajuste para recaptcha */
+.recaptcha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.recaptcha input {
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+  text-align: left;
+  margin: 8px; /* Agrega espacio alrededor */
+  padding-left: 10px; /* Ajusta el margen izquierdo */
+  font-size: 40px;
+}
+
+.contact-container h3 {
+    font-size: 20px; /* Más pequeño */
+    color: gray; /* Gris oscuro */
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Centrado y reducción del tamaño del texto informativo */
+.contact-container p {
+    font-size: 14px;
+    text-align: center left;
+    color: gray; /* Gris suave */
+    margin-bottom: 15px;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    justify-content: space-between;
+    gap: 40px;
+}
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+/* Cada caja con ícono y texto */
+.contact-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+/* Ajuste de los íconos */
+.contact-box img {
+    width: 30px;
+    height: 30px;
+}
+/* Texto dentro de cada caja */
+.contact-box p {
+    font-size: 16px;
+    margin: 0;
+}
+/* Estilos para el formulario */
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.recaptcha {
+    display: flex;
+    align-items: center; /* Alinea los elementos en la misma línea */
+    gap: 10px; /* Espacio entre la casilla y el texto */
+}
+
+.recaptcha input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle; /* Asegura alineación correcta */
+}
+
+.footer-container {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons img {
+    height: 25px;
+    margin: 5px;
+}

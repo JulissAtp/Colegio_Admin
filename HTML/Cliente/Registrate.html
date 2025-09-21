@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/Interfaz/InterfazSchool.css">
+    <link rel="stylesheet" href="/CSS/Interfaz/InterfazSchool_Testimonials.css">
+    <link rel="stylesheet" href="/CSS/Cliente/Estilo_Registrate.css">
+    <title>Registrate</title>
+</head>
+<body>
+     <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="InterfazSchool.html">
+                    <img src="/IMAGENES/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                    IE. Solidaridad III
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#nosotros">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="NoticiasAlumno.html">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+                        <li class="nav-item"><a class="btn btn-primary nav-link text-white" href="Registrate.html">Regístrate</a></li>
+                        <li class="nav-item"><a class="btn btn-light nav-link text-dark" href="Iniciar_Sesion.html">Inicia Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <div class="registro-container">
+        <!-- Sección izquierda: Formulario -->
+        <section class="form-section">
+            <div class="form-box">
+                <h2>Crea tu Cuenta</h2>
+                <form>
+                    <label for="name">Nombres</label>
+                    <input type="text" id="name" placeholder="Ingresa tu nombre" required>
+
+                    <label for="surname">Apellidos</label>
+                    <input type="text" id="surname" placeholder="Ingresa tu apellido" required>
+
+                    <label for="birthdate">Fecha de Nacimiento</label>
+                    <input type="date" id="birthdate" required>
+
+                    <label for="dni">Documento de Identidad (DNI)</label>
+                    <input type="text" id="dni" placeholder="Ingresa tu DNI" required>
+
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+
+                    <label for="confirm-password">Confirmar Contraseña</label>
+                    <input type="password" id="confirm-password" placeholder="Confirma tu contraseña" required>
+
+                    <button type="submit">Registrarte</button>
+                </form>
+                <p>¿Ya tienes cuenta? <a href="Iniciar_Sesion.html">Inicia Sesión</a></p>
+            </div>
+        </section>
+
+        <!-- Sección derecha: Imagen con texto encima -->
+        <section class="image-section">
+            <div class="overlay-text">REGÍSTRATE AQUÍ</div>
+        </section>
+
+    </div>   
+
+    
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container footer-top-content">
+                <div class="social-links">
+                    <span>Síganos</span>
+                    <a href="#" target="_blank"><img src="/IMAGENES/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="/IMAGENES/whatsapp-icon.png" alt="WhatsApp"></a>
+                </div>
+                <div class="newsletter">
+                    <span>Get the Newsletter</span>
+                    <input type="email" placeholder="Your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-info">
+                    <p>1717 Harrison St, San Francisco, CA 94103, USA</p>
+                    <p>&copy; 2025 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* Contenedor principal */
+.registro-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección del formulario */
+.form-section {
+    flex: 1;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #7A7A7A;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+button {
+    padding : 10px;
+    background-color: #007bff;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor general */
+.verification-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Caja con bordes redondeados */
+.captcha-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    width: fit-content;
+}
+.authorization-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Ajuste del checkbox */
+.captcha-box input{
+    width: 25px;
+    height: 25px;
+}
+.authorization-box input {
+    width: 18px;
+    height: 18px;
+}
+
+/* Ajuste de los textos dentro de cada caja */
+.captcha-box label{
+    font-size: 10px;
+    color: #333;
+    position: relative;
+    top: -5px; 
+}
+ .authorization-box label {
+    font-size: 7px;
+    color: #333;
+    position: relative;
+    top: -5px; /* Ajusta la posición vertical */
+}
+
+/* Ícono de reCAPTCHA */
+.captcha-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Texto pequeño debajo */
+.captcha-text {
+    font-size: 12px;
+    color: #777;
+    margin-left: auto;
+}
+
+/*----------------------------------------*/
+/* Sección de imagen */
+.image-section {
+    flex: 1;
+    display: flex;
+    align-items: stretch; /* Asegura que la imagen se extienda */
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que se ajuste sin perder proporción */
+    object-position: -70px 10px;
+}

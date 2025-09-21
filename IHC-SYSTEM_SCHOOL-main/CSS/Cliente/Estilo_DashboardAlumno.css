@@ -1,0 +1,628 @@
+/* IHC-PROYECTO/CSS/Cliente/Estilo_DashboardAlumno.css */
+
+:root {
+    /* Variables base de InterfazSchool.css para consistencia */
+    --color-fondo-principal: #f0f2f5;
+    --color-texto-principal: #333;
+    --color-texto-secundario: #999999;
+    --color-borde: #cccccc;
+    --color-azul-claro-btn: #007bff;
+    --color-azul-oscuro-btn: #0056b3;
+    --color-gris-claro-btn: #f8f9fa;
+    --color-gris-claro-btn-hover: #e2e6ea;
+
+    --color-header-fondo: #7A163C; /* Granate/Vino */
+    --color-header-texto: #ffffff;
+    
+    --sombra-suave: 0 2px 4px rgba(0,0,0,0.1);
+    --sombra-media: 0 4px 8px rgba(0,0,0,0.15);
+    --sombra-fuerte: 0 8px 16px rgba(0,0,0,0.3);
+
+    --padding-sm: 10px;
+    --padding-md: 20px;
+    --padding-lg: 40px;
+    --gap-sm: 10px;
+    --gap-md: 20px;
+
+    /* Colores adicionales para las tarjetas del dashboard (similares a Dashwork.css) */
+    --color-card-primary: #f03a3a; /* Similar al primary de Dashwork */
+    --color-card-success: #1cc88a; /* Similar al active de Dashwork */
+    --color-card-info: #36b9cc; /* Similar al science de Dashwork */
+    --color-card-warning: #f6c23e; /* Similar al literature de Dashwork */
+    --color-card-danger: #e74a3b; /* Similar al inactive de Dashwork */
+    --color-card-dark: #3a3b45; /* Color oscuro */
+
+    --dashboard-sidebar-width: 220px; /* Ancho de la nueva barra lateral interna */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header superior (se mantienen los estilos de InterfazSchool.css y son consistentes) */
+.main-header {
+    background-color: var(--color-header-fondo);
+    color: var(--color-header-texto);
+    padding: var(--padding-sm) 0;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.main-header .navbar-brand img {
+    height: 30px;
+    margin-right: 8px;
+}
+
+.main-header .navbar-brand {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--color-header-texto);
+}
+
+.main-header .nav-link {
+    color: var(--color-header-texto);
+    font-weight: bold;
+    padding: 5px var(--padding-sm);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-header .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-header .btn-light {
+    background-color: var(--color-gris-claro-btn);
+    color: var(--color-texto-principal) !important;
+}
+
+.main-header .btn-light:hover {
+    background-color: var(--color-gris-claro-btn-hover);
+}
+
+
+/* Contenedor principal del Dashboard de Alumno (incluye sidebar interna y contenido) */
+.dashboard-wrapper {
+    display: flex;
+    flex-grow: 1; /* Ocupa todo el espacio vertical disponible */
+    background-color: var(--color-fondo-principal);
+}
+
+/* Barra Lateral Interna del Dashboard de Alumno */
+.dashboard-sidebar {
+    width: var(--dashboard-sidebar-width);
+    min-width: var(--dashboard-sidebar-width); /* Evita que se encoja */
+    background-color: var(--color-header-fondo); /* Fondo granate */
+    color: white;
+    padding: var(--padding-md);
+    box-shadow: var(--sombra-media);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* No se encogerá más allá de su ancho */
+}
+
+.dashboard-sidebar .sidebar-header {
+    text-align: center;
+    padding-bottom: var(--padding-md);
+}
+
+.dashboard-sidebar .profile-avatar-small {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.dashboard-sidebar .sidebar-divider-inner {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: var(--padding-md) 0;
+}
+
+.dashboard-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.75rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 0.35rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-sidebar .nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenido Principal Dinámico del Dashboard de Alumno */
+.dashboard-main-content {
+    flex-grow: 1;
+    padding: var(--padding-lg);
+    background-color: var(--color-fondo-principal);
+}
+
+.dashboard-title {
+    color: var(--color-header-fondo);
+    font-weight: bold;
+    margin-bottom: var(--padding-lg);
+}
+
+.container-fluid.p-0 {
+    max-width: none; /* Elimina la restricción de ancho para los fragmentos */
+}
+
+
+/* Sección de Bienvenida y Avatar (en overview_fragment.html) */
+.welcome-section {
+    background-color: var(--color-blanco);
+    padding: var(--padding-md);
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+    align-items: center;
+}
+
+.welcome-section h1 {
+    color: var(--color-header-fondo);
+    font-weight: bold;
+    margin-bottom: var(--padding-sm);
+    font-size: 2.2em;
+}
+
+.welcome-section .lead {
+    color: var(--color-texto-secundario);
+    font-size: 1.1em;
+}
+
+.profile-avatar-container {
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 3px solid var(--color-azul-claro-btn);
+}
+
+.profile-avatar-container span {
+    font-size: 0.9em;
+    color: var(--color-texto-principal);
+}
+
+/* Tarjetas de Resumen (en overview_fragment.html) */
+.summary-cards-row .summary-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 120px;
+}
+
+.summary-cards-row .summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.summary-cards-row .summary-card h4 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.summary-cards-row .summary-card p {
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+.summary-cards-row .summary-card i {
+    font-size: 3em;
+    opacity: 0.8;
+}
+
+/* Colores de las tarjetas de resumen */
+.summary-card.bg-info { background-color: var(--color-card-info) !important; color: white;}
+.summary-card.bg-warning { background-color: var(--color-card-warning) !important; color: black;}
+.summary-card.bg-success { background-color: var(--color-card-success) !important; color: white;}
+.summary-card.bg-danger { background-color: var(--color-card-danger) !important; color: white;}
+
+
+/* Tarjetas Generales (en los fragmentos) */
+.dashboard-main-content .card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--sombra-media);
+    overflow: hidden;
+}
+
+.dashboard-main-content .card-header {
+    border-radius: 8px 8px 0 0 !important;
+    font-weight: bold;
+    padding: var(--padding-md);
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+/* Colores de los headers de las tarjetas */
+.dashboard-main-content .card-header.bg-primary { background-color: var(--color-card-primary) !important; }
+.dashboard-main-content .card-header.bg-success { background-color: var(--color-card-success) !important; }
+.dashboard-main-content .card-header.bg-info { background-color: var(--color-card-info) !important; }
+.dashboard-main-content .card-header.bg-warning { background-color: var(--color-card-warning) !important; }
+.dashboard-main-content .card-header.bg-danger { background-color: var(--color-card-danger) !important; }
+.dashboard-main-content .card-header.bg-dark { background-color: var(--color-card-dark) !important; }
+
+
+.dashboard-main-content .card-header i {
+    margin-right: var(--padding-sm);
+}
+
+.dashboard-main-content .card-body {
+    padding: var(--padding-md);
+    background-color: var(--color-blanco);
+}
+
+/* Listas dentro de las tarjetas (anuncios, tareas) */
+.dashboard-main-content .card-body ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--padding-sm);
+}
+
+.dashboard-main-content .card-body ul li {
+    margin-bottom: var(--padding-sm);
+    color: var(--color-texto-principal);
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.dashboard-main-content .card-body ul li strong {
+    color: var(--color-header-fondo);
+}
+
+/* Botones de "Ver más" */
+.dashboard-main-content .btn-link {
+    color: var(--color-azul-claro-btn);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0;
+}
+
+.dashboard-main-content .btn-link:hover {
+    color: var(--color-azul-oscuro-btn);
+}
+
+/* Estilos de la tabla (últimas calificaciones) */
+.dashboard-main-content .table-responsive {
+    margin-top: var(--padding-sm);
+}
+
+.dashboard-main-content .table {
+    margin-bottom: 0;
+}
+
+.dashboard-main-content .table th,
+.dashboard-main-content .table td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.dashboard-main-content .table thead.thead-light th {
+    background-color: var(--color-gris-claro-btn);
+    color: var(--color-texto-principal);
+    font-weight: bold;
+}
+
+.dashboard-main-content .table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Contenedor del gráfico para altura */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Calendario */
+.calendar th, .calendar td {
+    width: calc(100% / 7);
+    padding: 8px;
+    height: 50px;
+    vertical-align: middle;
+    font-weight: bold;
+    color: var(--color-texto-principal);
+}
+
+.calendar thead th {
+    background-color: var(--color-gris-claro-btn);
+    color: var(--color-header-fondo);
+    font-size: 0.9em;
+}
+
+.calendar tbody td {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+}
+
+.calendar tbody td:hover {
+    background-color: #f9f9f9;
+}
+
+.calendar .event-day {
+    background-color: var(--color-azul-claro-btn);
+    color: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1.1em;
+    box-shadow: var(--sombra-suave);
+    transition: background-color 0.3s ease;
+}
+
+.calendar .event-day:hover {
+    background-color: var(--color-azul-oscuro-btn);
+}
+
+.calendar-events-list {
+    list-style: disc;
+    padding-left: var(--padding-md);
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+.calendar-events-list li {
+    margin-bottom: var(--padding-sm);
+    color: var(--color-texto-principal);
+}
+
+.calendar-events-list li strong {
+    color: var(--color-azul-claro-btn);
+}
+
+/* Estilos para la tabla de Horario */
+.timetable th, .timetable td {
+    padding: 8px !important;
+    font-size: 0.9em;
+}
+
+.timetable thead th {
+    background-color: var(--color-card-dark) !important;
+    color: var(--color-header-texto) !important;
+}
+
+.timetable tbody td {
+    background-color: var(--color-blanco);
+}
+
+.timetable tbody tr:nth-child(even) td {
+    background-color: #f8f8f8;
+}
+
+/* Estilos para las listas en los tabs (mensajes, aulas, reglamentos) */
+.list-group-item {
+    background-color: var(--color-fondo-principal);
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    padding: 10px 15px;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+}
+
+.list-group-item .badge {
+    margin-left: 10px;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: var(--color-azul-claro-btn);
+    font-weight: bold;
+}
+
+.list-group-item a:hover {
+    color: var(--color-azul-oscuro-btn);
+}
+
+.list-group-item i {
+    color: var(--color-texto-secundario);
+}
+
+
+/* Footer (tomado de InterfazSchool_Testimonials.css para consistencia) */
+.main-footer {
+    background-color: #1a1a1a;
+    color: var(--color-header-texto);
+    padding-top: var(--padding-md);
+    padding-bottom: var(--padding-md);
+    width: 100%;
+    margin-top: auto;
+}
+
+.main-footer .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--padding-sm);
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main-footer .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--padding-md);
+    margin: 0;
+}
+
+.main-footer .footer-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-nav a:hover {
+    color: var(--color-header-texto);
+}
+
+/* Responsive del footer */
+@media (max-width: 768px) {
+    .main-footer .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-footer .footer-nav ul {
+        flex-direction: column;
+        gap: var(--padding-sm);
+        margin-bottom: var(--padding-md);
+    }
+    .main-footer .footer-info {
+        text-align: center;
+    }
+}
+
+/* Media Queries para Responsividad del Dashboard de Alumno */
+@media (max-width: 992px) {
+    .dashboard-sidebar {
+        width: 180px;
+        min-width: 180px;
+    }
+    .dashboard-main-content {
+        padding: var(--padding-md);
+    }
+    .dashboard-sidebar .profile-avatar-small {
+        width: 60px;
+        height: 60px;
+    }
+    .dashboard-sidebar h6 {
+        font-size: 0.9em;
+    }
+    .dashboard-sidebar small {
+        font-size: 0.7em;
+    }
+    .dashboard-sidebar .nav-link {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9em;
+    }
+    .dashboard-sidebar .nav-link i {
+        font-size: 0.9em;
+    }
+    .summary-cards-row .summary-card {
+        min-height: 100px;
+        padding: var(--padding-sm);
+    }
+    .summary-cards-row .summary-card h4 {
+        font-size: 1.8em;
+    }
+    .summary-cards-row .summary-card p {
+        font-size: 0.8em;
+    }
+    .summary-cards-row .summary-card i {
+        font-size: 2.5em;
+    }
+    .calendar th, .calendar td {
+        padding: 6px;
+        height: 45px;
+        font-size: 0.9em;
+    }
+    .calendar .event-day {
+        width: 25px;
+        height: 25px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 767px) {
+    .dashboard-wrapper {
+        flex-direction: column;
+    }
+    .dashboard-sidebar {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        flex-direction: row; /* Elementos en fila */
+        justify-content: space-around;
+        padding: var(--padding-md) 0;
+        box-shadow: none; /* Eliminar sombra para móviles */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .dashboard-sidebar .sidebar-header {
+        display: none; /* Ocultar el header del sidebar en móvil para más espacio en la nav */
+    }
+    .dashboard-sidebar nav {
+        flex-direction: row; /* Enlaces en fila */
+        flex-wrap: wrap; /* Permitir que los enlaces salten de línea */
+        justify-content: center;
+        width: 100%;
+    }
+    .dashboard-sidebar .nav-link {
+        margin: 0.2rem 0.5rem;
+        font-size: 0.85em;
+        padding: 0.5rem 0.8rem;
+    }
+    .dashboard-sidebar .nav-link span {
+        display: none; /* Ocultar texto en móviles para dejar solo iconos */
+    }
+    .dashboard-sidebar .nav-link i {
+        margin-right: 0;
+        font-size: 1.2em;
+    }
+    .dashboard-sidebar .nav-link.active-link {
+        border-left: none;
+        border-bottom: 3px solid white; /* Borde inferior para activo */
+        padding-bottom: calc(0.5rem - 3px);
+    }
+
+    .dashboard-main-content {
+        padding: var(--padding-md) var(--padding-sm);
+    }
+    .dashboard-title {
+        text-align: center;
+    }
+    .summary-cards-row [class*="col-"] {
+        margin-bottom: var(--padding-sm) !important;
+    }
+    .timetable th, .timetable td {
+        font-size: 0.7em;
+        padding: 4px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard-sidebar .nav-link {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75em;
+    }
+    .dashboard-sidebar .nav-link i {
+        font-size: 1em;
+    }
+    .dashboard-main-content .card-header h5 {
+        font-size: 1em;
+    }
+    .dashboard-main-content .card-body ul li {
+        font-size: 0.85em;
+    }
+    .calendar th, .calendar td {
+        padding: 3px;
+        height: 35px;
+        font-size: 0.7em;
+    }
+    .calendar .event-day {
+        width: 20px;
+        height: 20px;
+        font-size: 0.8em;
+    }
+}

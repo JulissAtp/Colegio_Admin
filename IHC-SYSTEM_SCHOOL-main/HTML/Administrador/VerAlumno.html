@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Alumno</title>
+    <link rel="stylesheet" href="/CSS/Administrador/Estilo_VerAlumno.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <h1 class="titulo-principal">Ver Alumno</h1>
+        
+        <div class="contenedor-formulario">
+            <div class="columna-izquierda">
+                <div class="grupo-campo">
+                    <label for="idAlumno">ID Alumno</label>
+                    <input type="text" id="idAlumno" name="idAlumno">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" id="nombres" name="nombres">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="2025-05-14">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="documentoIdentidad">Documento de Identidad (DNI)</label>
+                    <input type="text" id="documentoIdentidad" name="documentoIdentidad">
+                </div>
+            </div>
+            
+            <div class="columna-centro">
+                <div class="contenedor-avatar">
+                    <div class="avatar">
+                        <div class="icono-usuario"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="columna-derecha">
+                <div class="grupo-campo">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" id="telefono" name="telefono">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="estado">Estado</label>
+                    <div class="contenedor-select">
+                        <select id="estado" name="estado">
+                            <option value="activo" selected>Activo</option>
+                            <option value="inactivo">Inactivo</option>
+                            <option value="suspendido">Suspendido</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="idPadre">ID Padre</label>
+                    <input type="text" id="idPadre" name="idPadre">
+                </div>
+            </div>
+        </div>
+        
+        <div class="seccion-archivo">
+            <div class="contenedor-archivo">
+                <span class="etiqueta-archivo">Documento adjunto</span>
+                <div class="archivo-subido">
+                    
+                    <span class="nombre-archivo">ARCHIVO</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contenedor-boton">
+            <button class="boton-nuevo-alumno">Nuevo Alumno</button>
+        </div>
+    </div>
+</body>
+</html>

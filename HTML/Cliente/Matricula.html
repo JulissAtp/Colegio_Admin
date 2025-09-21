@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/Interfaz/InterfazSchool.css">
+    <link rel="stylesheet" href="/CSS/Interfaz/InterfazSchool_Testimonials.css">
+    <link rel="stylesheet" href="/CSS/Cliente/Estilo_Matricula.css">
+    <title>MATRICULATE</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="InterfazSchool.html">
+                    <img src="/IMAGENES/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                    IE. Solidaridad III
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#nosotros">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="NoticiasAlumno.html">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+                        <li class="nav-item"><a class="btn btn-primary nav-link text-white" href="Registrate.html">Regístrate</a></li>
+                        <li class="nav-item"><a class="btn btn-light nav-link text-dark" href="Iniciar_Sesion.html">Inicia Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+    <div class="registro-container">
+        <!-- Sección izquierda: Formulario -->
+        <div class="form-section">
+            <h2>MATRICÚLATE AHORA</h2>
+            <form action="#" method="post">
+                <label for="nombres">Nombres</label>
+                <input type="text" id="nombres" required>
+
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" required>
+
+                <label for="dni">Documento de Identidad (DNI)</label>
+                <input type="text" id="dni" required>
+
+                <label for="sexo">Sexo</label>
+                <select id="sexo" required>
+                    <option value="">Selecciona</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Femenino</option>
+                </select>
+
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" required>
+
+                <label for="documento">Documento adjunto</label>
+                <input type="file" id="documento" required>
+
+                <div class="verification-container">
+                    <!-- Sección de reCAPTCHA -->
+                    <div class="captcha-box">
+                        <input type="checkbox" id="robot" required>
+                        <label for="robot">No soy un robot</label>
+                        <div class="captcha-icon">
+                            <img src="/IMAGENES/Recaptcha.png" alt="reCAPTCHA">
+                        </div>
+                        <div class="captcha-text">
+                            <p>reCAPTCHA</p>
+                            <p><a href="#">Privacidad</a> - <a href="#">Términos</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Sección de autorización -->
+                    <div class="authorization-box">
+                        <input type="checkbox" id="auth1" required>
+                        <label for="auth1">Autorizo el tratamiento de mis datos personales para finalidades 
+                            informativas y comerciales, conforme al siguiente enlace. Sin mi autorización,
+                            no podrán comunicarse conmigo.</label>
+                    </div>
+
+                    <div class="authorization-box">
+                        <input type="checkbox" id="auth2">
+                        <label for="auth2">Opcionalmente, autorizo el tratamiento de mis datos personales 
+                            para las Finalidades Comerciales Adicionales descritas en el siguiente 
+                            enlace.</label>
+                    </div>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Sección derecha: Imagen -->
+        <div class="image-section">
+            <img src="/IMAGENES/Reg.png" alt="Ceremonia Escolar">
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container footer-top-content">
+                <div class="social-links">
+                    <span>Síganos</span>
+                    <a href="#" target="_blank"><img src="/IMAGENES/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="/IMAGENES/whatsapp-icon.png" alt="WhatsApp"></a>
+                </div>
+                <div class="newsletter">
+                    <span>Get the Newsletter</span>
+                    <input type="email" placeholder="Your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-info">
+                    <p>1717 Harrison St, San Francisco, CA 94103, USA</p>
+                    <p>&copy; 2025 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

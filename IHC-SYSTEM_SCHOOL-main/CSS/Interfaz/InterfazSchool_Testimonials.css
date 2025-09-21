@@ -1,0 +1,284 @@
+/* ========================================================= */
+/* --- SECCIÓN TESTIMONIOS --- */
+/* ========================================================= */
+.testimonials-section {
+    background-color: var(--color-fondo-principal);
+    padding-top: var(--padding-lg);
+    padding-bottom: var(--padding-lg);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: var(--padding-lg);
+}
+
+.testimonials-section .container {
+    max-width: 1000px;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    box-shadow: var(--sombra-fuerte);
+    padding: var(--padding-lg) var(--padding-md);
+}
+
+.testimonials-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--color-sobre-nosotros-titulo);
+    margin-bottom: var(--padding-sm);
+}
+
+.testimonials-subtitle {
+    font-size: 1em;
+    color: var(--color-texto-secundario);
+    margin-bottom: var(--padding-lg);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--padding-md);
+    margin-bottom: var(--padding-lg);
+}
+
+.testimonial-card {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+    padding: var(--padding-md);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.testimonial-card .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--padding-sm);
+}
+
+.testimonial-card .user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: var(--padding-sm);
+    background-color: var(--color-gris-claro);
+}
+
+.testimonial-card .user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-card .user-info {
+    line-height: 1.2;
+}
+
+.testimonial-card .user-name {
+    font-weight: bold;
+    color: var(--color-texto-principal);
+    margin-bottom: 2px;
+}
+
+.testimonial-card .user-handle {
+    font-size: 0.9em;
+    color: var(--color-texto-secundario);
+}
+
+.testimonial-card .testimonial-text {
+    font-style: italic;
+    color: var(--color-texto-principal);
+    margin-bottom: var(--padding-sm);
+    line-height: 1.5;
+}
+
+.testimonial-card .testimonial-date {
+    font-size: 0.8em;
+    color: var(--color-texto-secundario);
+    text-align: right;
+}
+
+.scroll-to-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-header-fondo);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: var(--sombra-media);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: var(--padding-md);
+}
+
+.scroll-to-top:hover {
+    background-color: #5a2e8c;
+}
+
+.scroll-to-top img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.main-footer {
+    background-color: #1a1a1a;
+    color: var(--color-header-texto);
+    padding-top: var(--padding-lg);
+    padding-bottom: var(--padding-md);
+}
+
+.main-footer .footer-top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: var(--padding-lg);
+    margin-bottom: var(--padding-md);
+}
+
+.main-footer .footer-top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--padding-md);
+}
+
+.main-footer .social-links,
+.main-footer .newsletter {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-sm);
+}
+
+.main-footer .social-links span,
+.main-footer .newsletter span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.main-footer .social-links img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.main-footer .social-links img:hover {
+    transform: scale(1.1);
+}
+
+.main-footer .newsletter input {
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-header-texto);
+    font-size: 0.9em;
+    outline: none;
+}
+
+.main-footer .newsletter input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.main-footer .newsletter button {
+    background-color: var(--color-azul-claro-btn);
+    color: var(--color-header-texto);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-footer .newsletter button:hover {
+    background-color: var(--color-azul-oscuro-btn);
+}
+
+.main-footer .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--padding-sm);
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main-footer .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--padding-md);
+}
+
+.main-footer .footer-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-nav a:hover {
+    color: var(--color-header-texto);
+}
+
+@media (max-width: 992px) {
+    .testimonials-section .container {
+        padding: var(--padding-md) var(--padding-sm);
+    }
+    .testimonials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .main-footer .footer-top-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-footer .social-links,
+    .main-footer .newsletter {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: var(--padding-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-title {
+        font-size: 2em;
+    }
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    .testimonial-card {
+        padding: var(--padding-sm);
+    }
+    .main-footer .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-footer .footer-nav ul {
+        flex-direction: column;
+        gap: var(--padding-sm);
+        margin-bottom: var(--padding-md);
+    }
+    .main-footer .footer-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-title {
+        font-size: 1.8em;
+    }
+    .testimonials-subtitle {
+        font-size: 0.9em;
+    }
+    .main-footer .newsletter input,
+    .main-footer .newsletter button {
+        width: 100%;
+        margin-bottom: var(--padding-sm);
+    }
+}
